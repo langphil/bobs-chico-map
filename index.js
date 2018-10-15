@@ -1,14 +1,14 @@
-const http = require('http');
+const express = require('express');
+const app = express();
+const path = require('path');
+const port = process.env.PORT || 3000;
 
-const hostname = '127.0.0.1';
-const PORT = process.env.PORT || 5000;
+app.use(express.static('public'));
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Chico Web\n');
+app.get('/', function(req, res) {
+	res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-server.listen(PORT, () => {
-  console.log(`Server running on ${PORT}/`);
+app.listen(port, function () {
+ console.log(`Example app listening on port:` + port);
 });

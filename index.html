@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Bob's Chico - Main Title</title>
+	</head>
+	<body>
+		<h1>Bob's Chico</h1>
+		<h2>A website to document Bob Keller's impact on Chico, California</h2>
+		<img src="/images/bob-keller.jpg" alt="Test image of Bidwell Mansion" height="500" width="500">
+		<form class="user-form" id="property" action="index.html" method="post">
+			<h2>Address Details</h2>
+			<div>
+				<label for="name">Property Owner(s) (e.g. the Books) / Name of Property (e.g. the Book Family Farm):</label>
+				<input type="text" id="name" name="owner_or_property_name">
+			</div>
+			<div class="form-group">
+				<label for="name">Address:</label>
+				<input type="text" name="name" class="form-control" id="address">
+			</div>
+			<div>
+				<label for="name">Type of Work:</label>
+				<select>
+				<option value="placeholder" disabled selected>Please select</option>
+				<option value="whole-house">Whole house</option>
+				<option value="kitchen">Kitchen</option>
+				<option value="bathroom">Bathroom</option>
+				<option value="deck">Deck</option>
+				<option value="exterior">Exterior</option>
+				<option value="painting">Painting</option>
+				<option value="roofing">Roofing</option>
+				<option value="windows">Windows</option>
+				<option value="electrical">Electrical</option>
+				<option value="plumbing">Plumbing</option>
+				<option value="other">Other (please explain)</option>
+				</select>
+			</div>
+			<div>
+				<label for="name">Name(s) of Helper(s):</label>
+				<input type="text" id="name" name="helper_name">
+			</div>
+			<div>
+				<label= for="name">Decade:</label>
+				<select>
+				<option value="placeholder" disabled selected>Please select</option>
+				<option value="1970s">1970s</option>
+				<option value="1980s">1980s</option>
+				<option value="1990s">1990s</option>
+				<option value="2000s">2000s</option>
+				<option value="2010s">2010s</option>
+				</select>
+			</div>
+			<div>
+				<label= for"name">Images:</label>
+				<input type="text" id="name" name="Select image to upload">
+			</div>
+			<div>
+				<label= for="name">Optional message, reminiscence or anecdote (to be displayed on the map):</label>
+				<input type="text" id="name" name="message" class="large-text-box" maxlength="500">
+			</div>
+			<div class="button">
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</body>
+</html>
