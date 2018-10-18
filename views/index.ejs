@@ -1,1 +1,55 @@
-<h1>Working With Forms in Node.js</h1>
+<h1>Bob's Chico</h1>
+<h2>A website to document Bob Keller's impact on Chico, California</h2>
+<div class="form-header">
+  <h2>Fill in the form</h2>
+</div>
+
+<form action="/data" method="post">
+	<div class="form-field">
+		<label for="owner">Property Owner(s) (e.g. the Books) / Name of Property (e.g. the Book Family Farm):</label>
+		<input type="text" name="owner">
+	</div>
+	<div class="form-field">
+		<label for="address">Address:</label>
+		<input type="text" name="address">
+	</div>
+	<div class="form-field">
+		<label for="work">Type of Work:</label>
+		<select name="work">
+			<option value="placeholder" disabled selected>Please select</option>
+			<option value="whole-house">Whole house</option>
+			<option value="kitchen">Kitchen</option>
+			<option value="bathroom">Bathroom</option>
+			<option value="deck">Deck</option>
+			<option value="exterior">Exterior</option>
+			<option value="painting">Painting</option>
+			<option value="roofing">Roofing</option>
+			<option value="windows">Windows</option>
+			<option value="electrical">Electrical</option>
+			<option value="plumbing">Plumbing</option>
+			<option value="other">Other (please explain)</option>
+		</select>
+	</div>
+	<div class="form-field">
+		<label for="helper">Name(s) of Helper(s):</label>
+		<input type="text" name="helper">
+	</div>
+	<div class="form-field">
+		<label= for="decade">Decade:</label>
+		<select name="decade">
+			<option value="placeholder" disabled selected>Please select</option>
+			<option value="1970s">1970s</option>
+			<option value="1980s">1980s</option>
+			<option value="1990s">1990s</option>
+			<option value="2000s">2000s</option>
+			<option value="2010s">2010s</option>
+		</select>
+	</div>
+	<div class="form-field">
+		<label= for="message">Optional message, reminiscence or anecdote:</label>
+		<input type="text" name="message" class="large-text-box" maxlength="500">
+	</div>
+	<div class="form-actions">
+		<button class="btn" type="submit" value="submit">Submit</button>
+	</div>
+</form>
