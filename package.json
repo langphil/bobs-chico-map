@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+		"scss": "node-sass --watch public/scss -o public/css"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +16,8 @@
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "express-layout": "^0.1.0"
+    "express-layout": "^0.1.0",
+    "node-sass": "^4.9.4"
   },
   "devDependencies": {
     "nodemon": "^1.14.11"

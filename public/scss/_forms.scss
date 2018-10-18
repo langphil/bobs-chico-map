@@ -1,0 +1,25 @@
+.form-header {
+	width: 80vw;
+	margin-bottom: $margin;
+}
+
+form {
+	width: 80vw;
+
+	.form-field {
+		margin-bottom: $margin * 2;
+
+		label {
+			display: block;
+			margin-bottom: $margin / 2;
+			font-weight: 600;
+		}
+
+		select, input {
+			display: block;
+			margin-bottom: $margin / 2;
+			padding: $padding;
+			width: 90%;
+		}
+	}
+}
