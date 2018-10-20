@@ -2,15 +2,17 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 100vw;
+	width: 90vw;
+	border-bottom: solid black 0.4px;
 }
 
 .logo {
-	margin-left: 2.3em;
+	// margin-left: 2.3em;
 	align-self: center;
 
-	a {
+	a:link, a:visited, a:hover, a:active {
 		text-decoration: none;
+		color: $black;
 	}
 }
 
@@ -20,12 +22,17 @@ nav {
 }
 
 header ul {
- display: flex;
- flex-flow: row wrap;
- list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+	list-style-type: none;
 }
 
 header ul li {
- padding: 0 1.4em 0 0;
- font-size: 0.9em;
+	padding: 0 0 0 1.4em;
+	font-size: 0.9em;
+
+	a:link, a:visited, a:hover, a:active {
+		text-decoration: none;
+		color: $black;
+	}
 }

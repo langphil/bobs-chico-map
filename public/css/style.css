@@ -3,7 +3,7 @@
   width: 30%;
   float: right;
   padding: 10px;
-  background: #24b47e;
+  background: black;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-width: 1px 1px 3px;
   border-radius: 3px;
@@ -15,7 +15,7 @@
 .btn:hover,
 .btn:focus {
   outline: none;
-  background: #2AA172; }
+  background: #000000; }
 
 .btn:active {
   transform: translateY(1px); }
@@ -28,20 +28,26 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #D3D3D3;
-  font-family: -apple-system, 'Segoe UI', sans-serif; }
+  background: #FFFFFF;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  text-align: left; }
+
+.body-container {
+  text-align: left;
+  width: 90vw; }
 
 .header-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw; }
+  width: 90vw;
+  border-bottom: solid black 0.4px; }
 
 .logo {
-  margin-left: 2.3em;
   align-self: center; }
-  .logo a {
-    text-decoration: none; }
+  .logo a:link, .logo a:visited, .logo a:hover, .logo a:active {
+    text-decoration: none;
+    color: #000000; }
 
 nav {
   margin: 0 0.8em 0 0;
@@ -53,8 +59,11 @@ header ul {
   list-style-type: none; }
 
 header ul li {
-  padding: 0 1.4em 0 0;
+  padding: 0 0 0 1.4em;
   font-size: 0.9em; }
+  header ul li a:link, header ul li a:visited, header ul li a:hover, header ul li a:active {
+    text-decoration: none;
+    color: #000000; }
 
 .form-header {
   width: 80vw;
