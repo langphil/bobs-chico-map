@@ -5,6 +5,14 @@ router.get('/', (req, res) => {
   res.render('index')
 })
 
+router.get('/map', (req, res) => {
+	res.render('map')
+})
+
+router.get('/submission', (req, res) => {
+	res.render('submission')
+})
+
 router.post('/data', (req, res) => {
 	const owner = req.body.owner;
 	const address = req.body.work;
