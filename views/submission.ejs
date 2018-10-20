@@ -1,14 +1,16 @@
 <div class="form-header">
   <h2>A website to document Bob Keller's impact on Chico, California</h2>
 </div>
-<form action="/data" method="post">
+<form action="/data" method="post" id="property">
 	<div class="form-field">
 		<label for="owner">Property Owner(s) Name of Property:</label>
 		<input type="text" name="owner">
 	</div>
 	<div class="form-field">
 		<label for="address">Address:</label>
-		<input type="text" name="address">
+		<input type="text" name="address" id="address" placeholder="Address">
+		<input type="hidden" name="lat" placeholder="Latitude" readonly>
+		<input type="hidden" name="lng" placeholder="Longitude" readonly>
 	</div>
 	<div class="form-field">
 		<label for="work">Type of Work:</label>
