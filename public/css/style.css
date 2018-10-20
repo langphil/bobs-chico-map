@@ -9,6 +9,31 @@ body {
   background: #D3D3D3;
   font-family: -apple-system, 'Segoe UI', sans-serif; }
 
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw; }
+
+.logo {
+  margin-left: 2.3em;
+  align-self: center; }
+  .logo a {
+    text-decoration: none; }
+
+nav {
+  margin: 0 0.8em 0 0;
+  align-self: center; }
+
+header ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none; }
+
+header ul li {
+  padding: 0 1.4em 0 0;
+  font-size: 0.9em; }
+
 .form-header {
   width: 80vw;
   margin-bottom: 1em; }
@@ -20,7 +45,8 @@ form {
     form .form-field label {
       display: block;
       margin-bottom: 0.5em;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase; }
     form .form-field select, form .form-field input {
       display: block;
       margin-bottom: 0.5em;
