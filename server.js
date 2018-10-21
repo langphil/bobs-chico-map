@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const layout = require('express-layout')
 const bodyParser = require('body-parser')
+const port = process.env.PORT || 8080;
 
 const routes = require('./routes')
 const app = express()
@@ -28,6 +29,6 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!')
 })
 
-app.listen(3000, () => {
-  console.log(`App running at http://localhost:3000`)
+app.listen(port, () => {
+  console.log(`App running at http://localhost:` + port)
 })
