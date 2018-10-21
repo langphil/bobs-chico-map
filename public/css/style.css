@@ -66,6 +66,9 @@ header ul li {
     text-decoration: none;
     color: #000000; }
 
+#map {
+  height: 300px; }
+
 .form-header {
   width: 80vw;
   margin-bottom: 1em; }
