@@ -41,7 +41,8 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 90vw;
-  border-bottom: solid black 0.4px; }
+  border-bottom: solid black 0.4px;
+  margin-bottom: 1em; }
 
 .logo {
   align-self: center; }
