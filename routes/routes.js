@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const location = require("../models/location.model");
 
 router.get('/', (req, res) => {
   res.render('index')
@@ -14,16 +15,25 @@ router.get('/submission', (req, res) => {
 })
 
 router.post('/data', (req, res) => {
-	const owner = req.body.owner;
-	const address = req.body.work;
-	const latitude = req.body.lat;
-	const longitude = req.body.lng;
-	const work = req.query.work;
-	const helper = req.body.helper;
-	const decade = req.query.decade;
-	const image = req.body.image;
-	const message = req.body.message;
-	res.send(req.body);
+	var newLocation = location(
+		{
+			geometry: {
+				coordinates:
+				[req.body.lat, req.body.lng]
+			},
+			properties: {
+				address: req.body.address,
+				propertyOwner: req.body.owner,
+				typeOfWork: req.body.work,
+				decade: req.body.decade,
+				message: req.body.mesage
+			}
+		}
+	)
+	newLocation.save(function(err) {
+		if (err) throw err;
+		res.send("Success");
+	});
 })
 
 module.exports = router

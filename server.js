@@ -4,12 +4,14 @@ const layout = require('express-layout')
 const bodyParser = require('body-parser')
 const mongoose = require("mongoose");
 
-const locationController = require("./controllers/location.controller");
 const routes = require('./routes/routes')
 const config = require("./config");
+const locationController = require("./controllers/location.controller");
 
 const port = process.env.PORT || 8080;
 const app = express()
+
+require('dotenv').config()
 
 mongoose.connect(config.getDbConnectionString(), { useNewUrlParser: true });
 
