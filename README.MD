@@ -3,10 +3,18 @@
 - Node.JS
 - Express
 - EJS
-- MLab
+
 - Heroku
-- mapbox
+
+- Mongoose
+- MLab
+- mongodb
+- mongoose-geojson-schema
+
+- Mapbox
 - Open Street Map
+
 - Leaflet.js
 - Google Maps Javascript API
 - Jquery
+
