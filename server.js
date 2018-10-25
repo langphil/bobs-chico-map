@@ -2,10 +2,18 @@ const path = require('path')
 const express = require('express')
 const layout = require('express-layout')
 const bodyParser = require('body-parser')
-const port = process.env.PORT || 8080;
+const mongoose = require("mongoose");
 
-const routes = require('./routes')
+const routes = require('./routes/routes')
+const config = require("./config");
+const locationController = require("./controllers/location.controller");
+
+const port = process.env.PORT || 8080;
 const app = express()
+
+require('dotenv').config()
+
+mongoose.connect(config.getDbConnectionString(), { useNewUrlParser: true });
 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
@@ -28,6 +36,8 @@ app.use((err, req, res, next) => {
   console.error(err.stack)
   res.status(500).send('Something broke!')
 })
+
+locationController(app);
 
 app.listen(port, () => {
   console.log(`App running at http://localhost:` + port)
