@@ -17,16 +17,17 @@ router.get('/submission', (req, res) => {
 router.post('/data', (req, res) => {
 	var newLocation = location(
 		{
-			geometry: {
-				coordinates:
-				[req.body.lat, req.body.lng]
-			},
 			properties: {
 				address: req.body.address,
 				propertyOwner: req.body.owner,
 				typeOfWork: req.body.work,
 				decade: req.body.decade,
-				message: req.body.mesage
+				helper: req.body.helper,
+				message: req.body.message
+			},
+			geometry: {
+				coordinates:
+				[req.body.lng, req.body.lat]
 			}
 		}
 	)
