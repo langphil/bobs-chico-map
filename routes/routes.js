@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const locationController = require("../controllers/location.controller");
-const locationModel = require("../models/location.model");
+const geojsonController = require("../controllers/geojson.controller");
 
 router.get('/', (req, res) => {
   res.render('index')
@@ -12,17 +12,7 @@ router.get('/map', (req, res) => {
 })
 
 router.get('/geojson', (req, res) => {
-	locationModel
-		.find({
-			type: 'Feature'
-		})
-		.then(doc => {
-			console.log(doc)
-			res.json(doc);
-		})
-		.catch(err => {
-			console.error(err)
-		})
+	geojsonController(req, res)
 })
 
 router.get('/submission', (req, res) => {

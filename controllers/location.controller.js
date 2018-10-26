@@ -1,7 +1,7 @@
-const location = require("../models/location.model");
+const locationModel = require("../models/location.model");
 
 module.exports = function(req, res) {
-	var newLocation = location(
+	let newLocation = locationModel(
 		{
 			properties: {
 				address: req.body.address,
