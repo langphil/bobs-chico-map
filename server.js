@@ -6,7 +6,6 @@ const mongoose = require("mongoose");
 
 const routes = require('./routes/routes')
 const config = require("./config");
-const locationController = require("./controllers/location.controller");
 
 const port = process.env.PORT || 8080;
 const app = express()
@@ -36,8 +35,6 @@ app.use((err, req, res, next) => {
   console.error(err.stack)
   res.status(500).send('Something broke!')
 })
-
-locationController(app);
 
 app.listen(port, () => {
   console.log(`App running at http://localhost:` + port)
