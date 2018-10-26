@@ -16,11 +16,11 @@ $(document).ready(function(){
 	})
 
 	function drawMap(data) {
-		createMapLayer(map);
+		addMapLayer(map);
 		mapGeoJson(data, map);
 	}
 
-	function createMapLayer(map) {
+	function addMapLayer(map) {
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 			maxZoom: 18,
@@ -34,13 +34,13 @@ $(document).ready(function(){
 			onEachFeature: function(feature, featureLayer) {
 				popupContent = []
 
-				placeMarker(feature, map)
+				addMarker(feature, map)
 				addProperties(feature, featureLayer, popupContent)
 			}
 		}).addTo(map);
 	}
 
-	function placeMarker(feature, map) {
+	function addMarker(feature, map) {
 		coordinates = feature.geometry.coordinates
 		L.marker([coordinates[1], coordinates[0]]).addTo(map);
 	}

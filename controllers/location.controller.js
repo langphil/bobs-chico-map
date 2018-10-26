@@ -19,6 +19,6 @@ module.exports = function(req, res) {
 	)
 	newLocation.save(function(err) {
 		if (err) throw err;
-		res.send("Success");
+		res.render('map')
 	});
 };
