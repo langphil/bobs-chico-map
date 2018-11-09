@@ -29,7 +29,7 @@ body {
   align-items: center;
   justify-content: center;
   background: #FFFFFF;
-  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-family: Helvetica, Sans-Serif;
   text-align: left; }
 
 .body-container {
@@ -79,12 +79,17 @@ header ul li {
 #map {
   height: 400px; }
 
+@media only screen and (min-width: 768px) {
+  #map {
+    height: 600px; } }
+
 .form-header {
   width: 80vw;
-  margin-bottom: 1em; }
+  margin-bottom: 3em; }
 
 form {
-  width: 80vw; }
+  width: 80vw;
+  margin-bottom: 4em; }
   form .form-field {
     margin-bottom: 2em; }
     form .form-field label {
@@ -92,7 +97,9 @@ form {
       margin-bottom: 0.5em;
       font-weight: 600;
       text-transform: uppercase; }
-    form .form-field select, form .form-field input {
+    form .form-field select, form .form-field input, form .form-field textarea {
+      font-family: inherit;
+      font-size: inherit;
       display: block;
       margin-bottom: 0.5em;
       padding: 1em;
@@ -100,6 +107,6 @@ form {
 
 @media only screen and (min-width: 768px) {
   .form-header {
-    width: 50vw; }
+    width: 40vw; }
   form {
-    width: 50vw; } }
+    width: 40vw; } }

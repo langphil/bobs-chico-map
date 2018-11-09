@@ -1,10 +1,11 @@
 .form-header {
 	width: 80vw;
-	margin-bottom: $margin;
+	margin-bottom: $margin * 3;
 }
 
 form {
 	width: 80vw;
+	margin-bottom: $margin * 4;
 
 	.form-field {
 		margin-bottom: $margin * 2;
@@ -16,7 +17,9 @@ form {
 			text-transform: uppercase;
 		}
 
-		select, input {
+		select, input, textarea {
+			font-family: inherit;
+			font-size: inherit;
 			display: block;
 			margin-bottom: $margin / 2;
 			padding: $padding;
@@ -28,10 +31,10 @@ form {
 @media only screen and (min-width: 768px) {
 
 	.form-header {
-		width: 50vw;
+		width: 40vw;
 	}
 
 	form {
-		width: 50vw;
+		width: 40vw;
 	}
 }
