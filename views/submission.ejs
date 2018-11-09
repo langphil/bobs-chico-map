@@ -1,20 +1,20 @@
 <div class="form-header">
-  <p>Enter the details for the property Bob worked on.</p>
+  <p>WRITE COPY - What you are asking people to do.</p>
 </div>
 <form action="/submission" method="post" id="property">
 	<div class="form-field">
 		<label for="owner">Property Owner(s) Name of Property:</label>
-		<input type="text" name="owner">
+		<input type="text" name="owner" required>
 	</div>
 	<div class="form-field">
 		<label for="address">Address:</label>
-		<input type="text" name="address" id="address" placeholder="Address">
+		<input type="text" name="address" id="address" placeholder="Address" required>
 		<input type="hidden" name="lat" placeholder="Latitude" readonly>
 		<input type="hidden" name="lng" placeholder="Longitude" readonly>
 	</div>
 	<div class="form-field">
 		<label for="work">Type of Work:</label>
-		<select name="work">
+		<select name="work" required>
 			<option value="placeholder" disabled selected>Please select</option>
 			<option value="whole-house">Whole house</option>
 			<option value="kitchen">Kitchen</option>
@@ -30,12 +30,8 @@
 		</select>
 	</div>
 	<div class="form-field">
-		<label for="helper">Name(s) of Helper(s):</label>
-		<input type="text" name="helper">
-	</div>
-	<div class="form-field">
-		<label= for="decade">Decade:</label>
-		<select name="decade">
+		<label for="decade">Decade:</label>
+		<select name="decade" required>
 			<option value="placeholder" disabled selected>Please select</option>
 			<option value="1970s">1970s</option>
 			<option value="1980s">1980s</option>
@@ -43,6 +39,10 @@
 			<option value="2000s">2000s</option>
 			<option value="2010s">2010s</option>
 		</select>
+	</div>
+	<div class="form-field">
+		<label for="helper">Name(s) of Helper(s):</label>
+		<input type="text" name="helper">
 	</div>
 	<div class="form-field">
 		<label for="message">Optional message, reminiscence or anecdote:</label>
