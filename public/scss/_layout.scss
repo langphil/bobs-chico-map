@@ -10,12 +10,14 @@ body {
 	background: $white;
 	font-family: Helvetica, Sans-Serif;
 	font-size: 1em;
+	line-height: 1.5em;
 	text-align: left;
 }
 
 .body-container {
 	text-align: left;
 	width: 90vw;
+	margin-bottom: $margin * 3;
 }
 
 @media only screen and (min-width: 768px) {
