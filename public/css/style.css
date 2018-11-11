@@ -32,7 +32,8 @@ body {
   font-family: Helvetica, Sans-Serif;
   font-size: 1em;
   line-height: 1.5em;
-  text-align: left; }
+  text-align: left;
+  margin-bottom: 0; }
 
 .body-container {
   text-align: left;
@@ -142,6 +143,14 @@ header ul li {
     font-size: 40px;
     top: 15px;
     right: 35px; } }
+
+footer {
+  background-color: #f1f1f1;
+  width: 100vw;
+  text-align: center;
+  margin-top: 3em; }
+  footer p {
+    font-size: 1em; }
 
 img {
   width: 100%; }
