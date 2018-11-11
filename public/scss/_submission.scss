@@ -1,6 +1,8 @@
 .form-header {
 	width: 80vw;
 	margin-bottom: $margin * 3;
+	padding-bottom: $padding;
+	border-bottom: 1px solid $black;
 }
 
 form {
@@ -23,7 +25,7 @@ form {
 			display: block;
 			margin-bottom: $margin / 2;
 			padding: $padding;
-			width: 90%;
+			width: 95%;
 		}
 	}
 }
@@ -36,5 +38,9 @@ form {
 
 	form {
 		width: 40vw;
+
+		select {
+			width: 60% !important;
+		}
 	}
 }

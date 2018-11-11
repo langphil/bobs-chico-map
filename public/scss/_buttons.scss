@@ -3,7 +3,7 @@
 	width: 30%;
 	float: right;
   padding: 10px;
-  background: black;
+  background: $red;
   border: 1px solid rgba(0,0,0,.1);
   border-width: 1px 1px 3px;
   border-radius: 3px;
@@ -15,7 +15,7 @@
 .btn:hover,
 .btn:focus {
   outline: none;
-  background: $black;
+  background: $light-red;
 }
 .btn:active {
   transform: translateY(1px);

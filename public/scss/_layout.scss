@@ -9,6 +9,7 @@ body {
 	justify-content: center;
 	background: $white;
 	font-family: Helvetica, Sans-Serif;
+	font-size: 1em;
 	text-align: left;
 }
 
@@ -20,13 +21,13 @@ body {
 @media only screen and (min-width: 768px) {
 	.body-container {
 		text-align: left;
-		width: 50vw;
+		width: 60vw;
 	}
 }
 
 @media only screen and (min-width: 992px) {
 	.body-container {
 		text-align: left;
-		width: 40vw;
+		width: 50vw;
 	}
 }
