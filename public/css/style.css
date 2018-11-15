@@ -1,3 +1,11 @@
+p {
+  font-size: 1.2em;
+  line-height: 1.5em; }
+
+h1, h2 {
+  margin-bottom: 1em;
+  line-height: 1.5em; }
+
 .btn {
   display: block;
   width: 30%;
@@ -19,6 +27,29 @@
 
 .btn:active {
   transform: translateY(1px); }
+
+a {
+  color: #205F82; }
+
+a:link {
+  color: #789EB4; }
+
+a:visited {
+  color: #789EB4; }
+
+a:hover {
+  color: #1F9CDF; }
+
+a:active {
+  color: #4690B8; }
+
+footer {
+  background-color: #f1f1f1;
+  width: 100vw;
+  text-align: center;
+  margin-top: 3em; }
+  footer p {
+    font-size: 1em; }
 
 html {
   height: 100%; }
@@ -144,14 +175,6 @@ header ul li {
     top: 15px;
     right: 35px; } }
 
-footer {
-  background-color: #f1f1f1;
-  width: 100vw;
-  text-align: center;
-  margin-top: 3em; }
-  footer p {
-    font-size: 1em; }
-
 img {
   width: 100%; }
 
@@ -199,26 +222,3 @@ form {
     width: 40vw; }
     form select {
       width: 60% !important; } }
-
-p {
-  font-size: 1.2em;
-  line-height: 1.5em; }
-
-h1, h2 {
-  margin-bottom: 1em;
-  line-height: 1.5em; }
-
-a {
-  color: #205F82; }
-
-a:link {
-  color: #789EB4; }
-
-a:visited {
-  color: #789EB4; }
-
-a:hover {
-  color: #1F9CDF; }
-
-a:active {
-  color: #4690B8; }
