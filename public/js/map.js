@@ -32,10 +32,8 @@ $(document).ready(function(){
 	function mapGeoJson(data, map) {
 		L.geoJson(data, {
 			onEachFeature: function(feature, featureLayer) {
-				popupContent = []
-
 				addMarker(feature, map)
-				addProperties(feature, featureLayer, popupContent)
+				addProperties(feature, featureLayer)
 			}
 		}).addTo(map);
 	}
@@ -46,9 +44,12 @@ $(document).ready(function(){
 	}
 
 	function addProperties(feature, featureLayer, popupContent) {
+    popupContent = []
+
 		for (var key in feature.properties) {
 			popupContent.push(key + ": " + feature.properties[key]);
 		}
+
 		featureLayer.bindPopup(popupContent.join("<br/>"));
 	}
 });
