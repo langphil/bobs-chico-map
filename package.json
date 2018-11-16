@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
     "scss": "node-sass --watch public/scss -o public/css",
-		"deploy": "git push heroku master"
+    "dev": "npm run start | npm run scss",
+    "herokuDeploy": "git push heroku master"
   },
   "author": "",
   "license": "ISC",
