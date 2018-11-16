@@ -1,10 +1,19 @@
-@import '_variables';
-@import '_buttons';
-@import '_layout';
-@import '_nav';
-@import '_footer';
-@import '_index';
-@import '_map';
-@import '_submission';
-@import '_typography';
-@import '_links';
+// Variables
+@import 'variables/_variables';
+
+// Base
+@import 'base/_typography';
+
+// Components
+@import 'components/_buttons';
+@import 'components/_links';
+
+// Layout
+@import 'layout/_footer';
+@import 'layout/_layout';
+@import 'layout/_nav';
+
+// Pages
+@import 'pages/_index';
+@import 'pages/_map';
+@import 'pages/_submission';
