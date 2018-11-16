@@ -13,6 +13,7 @@ const app = express()
 require('dotenv').config()
 
 mongoose.connect(config.getDbConnectionString(), { useNewUrlParser: true });
+mongoose.set('useCreateIndex', true);
 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')

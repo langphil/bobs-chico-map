@@ -47,9 +47,22 @@ $(document).ready(function(){
     popupContent = []
 
 		for (var key in feature.properties) {
-			popupContent.push(key + ": " + feature.properties[key]);
+			popupContent.push("<p><b>" + titilise(key) + "</b>: <br />" + feature.properties[key] + "</p>");
 		}
 
-		featureLayer.bindPopup(popupContent.join("<br/>"));
+		featureLayer.bindPopup(popupContent.join(""));
 	}
+
+  function titilise(key) {
+    var out = key.replace(/^\s*/, "");  // strip leading spaces
+    out = out.replace(/^[a-z]|[^\s][A-Z]/g, function(key, offset) {
+      if (offset == 0) {
+        return(key.toUpperCase());
+      } else {
+        return(key.substr(0,1) + " " + key.substr(1).toUpperCase());
+      }
+    });
+    return(out);
+  }
+
 });
