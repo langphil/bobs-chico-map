@@ -1,12 +1,10 @@
 .form-header {
-	width: 80vw;
 	margin-bottom: $margin * 3;
 	padding-bottom: $padding;
 	border-bottom: solid $light-grey 0.2px;
 }
 
 form {
-	width: 80vw;
 	margin-bottom: $margin * 4;
 
 	.form-field {
@@ -25,22 +23,18 @@ form {
 			display: block;
 			margin-bottom: $margin / 2;
 			padding: $padding;
-			width: 95%;
+			width: 85%;
 		}
+
+    select {
+      width: 85% !important;
+    }
 	}
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
 
-	.form-header {
-		width: 40vw;
-	}
-
-	form {
-		width: 40vw;
-
-		select {
-			width: 60% !important;
-		}
-	}
+  select {
+    width: 40%;
+  }
 }

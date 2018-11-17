@@ -18,11 +18,13 @@
 	<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/20625/jquery.geocomplete.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuaXZNY0Jc0K5_jrufb4723fD_ehAfbGE&libraries=places"></script>
 <body>
-<% include ./partials/nav %>
-<%- body %>
-<% include ./partials/footer %>
-<script src="/js/submission.js"></script>
-<script src="/js/map.js"></script>
-<script src="/js/nav.js"></script>
+  <% include ./partials/nav %>
+  <div class="body-container">
+    <%- body %>
+  </div>
+  <% include ./partials/footer %>
+  <script src="/js/submission.js"></script>
+  <script src="/js/map.js"></script>
+  <script src="/js/nav.js"></script>
 </body>
 </html>
