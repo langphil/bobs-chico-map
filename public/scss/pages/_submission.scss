@@ -23,18 +23,7 @@ form {
 			display: block;
 			margin-bottom: $margin / 2;
 			padding: $padding;
-			width: 85%;
+			width: 100%;
 		}
-
-    select {
-      width: 85% !important;
-    }
 	}
-}
-
-@media screen and (max-width: 767px) {
-
-  select {
-    width: 40%;
-  }
 }

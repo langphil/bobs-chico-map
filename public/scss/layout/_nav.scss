@@ -1,40 +1,14 @@
-.header-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 90vw;
-	border-bottom: solid $light-grey 0.2px;
-	margin-bottom: $margin;
-}
-
-.logo {
-	align-self: center;
-
-	a:link, a:visited, a:hover, a:active {
-		text-decoration: none;
-		color: $blue;
-	}
-}
-
 nav {
-	margin: 0 0.8em 0 0;
-	align-self: center;
-}
+  margin-bottom: $margin;
 
-header ul {
-	display: flex;
-	flex-flow: row wrap;
-	list-style-type: none;
-}
+  a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: $blue;
+  }
 
-header ul li {
-	padding: 0 0 0 1.4em;
-	font-size: 0.9em;
-
-	a:link, a:visited, a:hover, a:active {
-		text-decoration: none;
-		color: $black;
-	}
+  img {
+    margin-bottom: 7px;
+  }
 }
 
 /* The Overlay (background) */
@@ -69,7 +43,6 @@ header ul li {
 	 color: $white !important;
 	 display: block; /* Display block instead of inline */
 	 transition: 0.3s; /* Transition effects on hover (color) */
-	 margin-bottom: $margin;
 }
 
 /* When you mouse over the navigation links, change their color */

@@ -3,29 +3,14 @@ html {
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	background: $white;
 	font-family: Helvetica, Sans-Serif;
 	font-size: 1em;
 	line-height: 1.5em;
-	text-align: left;
 	margin-bottom: 0;
 }
 
 .body-container {
-	text-align: left;
-	width: 90vw;
+	width: 100vw;
 	margin-bottom: $margin * 3;
-}
-
-@media screen and (min-width: 767px) {
-
-  .body-container {
-  	text-align: left;
-  	width: 50vw;
-  	margin-bottom: $margin * 3;
-  }
 }
