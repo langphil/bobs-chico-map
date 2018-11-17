@@ -10,7 +10,8 @@ body {
 	margin-bottom: 0;
 }
 
-.body-container {
-	width: 100vw;
+.content-header {
 	margin-bottom: $margin * 3;
+	padding-bottom: $padding;
+	border-bottom: solid $light-grey 0.2px;
 }
