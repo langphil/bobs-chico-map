@@ -142,9 +142,13 @@ img {
   width: 100%;
   margin-bottom: 2em; }
 
-#map {
+.map {
   height: 600px;
   z-index: 0; }
+
+.loading {
+  display: none;
+  text-align: center; }
 
 form {
   margin-bottom: 4em; }
