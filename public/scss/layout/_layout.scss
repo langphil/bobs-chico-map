@@ -1,0 +1,21 @@
+html {
+	height: 100%;
+}
+
+body {
+	background: $white;
+	font-family: Helvetica, Sans-Serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: 0;
+}
+
+.content-container {
+  min-height: 90vh !important;
+}
+
+.content {
+	margin-bottom: $margin * 3;
+	padding-bottom: $padding;
+	border-bottom: solid $light-grey 0.2px;
+}

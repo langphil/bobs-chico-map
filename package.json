@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "scss": "node-sass --watch public/scss -o public/css"
+    "scss": "node-sass --watch public/scss -o public/css",
+    "dev": "npm run start | npm run scss",
+    "herokuDeploy": "git push heroku master"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +16,7 @@
     "node": "9.2.1"
   },
   "dependencies": {
+    "bootstrap": "^4.1.3",
     "dotenv": "^6.1.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",

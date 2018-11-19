@@ -1,21 +1,28 @@
-<div class="form-header">
-  <p>Enter the details for the property Bob worked on.</p>
+<div class="content">
+	<h1>Submit a property</h1>
+  <p>This form allows you to submit details about a property that Bob worked on.</p>
+	<p> You can add details such as the name and address of the property, type of work and the decade the work was completed in.</p>
+	<p><strong>Remember</strong>, the information (including personal messages) you submit will be publically displayed on an <a href="/map" title="Bob's Chico - Map" alt="Bob's Chico - Map">interactive map</a>.</p>
 </div>
-<form action="/data" method="post" id="property">
+
+<form action="/submission" method="post" id="property">
+
 	<div class="form-field">
-		<label for="owner">Property Owner(s) Name of Property:</label>
-		<input type="text" name="owner">
+		<label for="owner">Name of Property:</label>
+		<input type="text" name="owner" placeholder="" required>
 	</div>
+
 	<div class="form-field">
-		<label for="address">Address:</label>
-		<input type="text" name="address" id="address" placeholder="Address">
-		<input type="hidden" name="lat" placeholder="Latitude" readonly>
-		<input type="hidden" name="lng" placeholder="Longitude" readonly>
+		<label for="address">Address of Property:</label>
+		<input type="text" name="address" id="address" placeholder="eg... 1108 Sherman Ave, Chico, CA 95926, USA" required>
+		<input type="hidden" name="lat" placeholder="Latitude" readonly required>
+		<input type="hidden" name="lng" placeholder="Longitude" readonly required>
 	</div>
+
 	<div class="form-field">
 		<label for="work">Type of Work:</label>
-		<select name="work">
-			<option value="placeholder" disabled selected>Please select</option>
+		<select name="work" required>
+			<option value="placeholder" disabled selected>Select</option>
 			<option value="whole-house">Whole house</option>
 			<option value="kitchen">Kitchen</option>
 			<option value="bathroom">Bathroom</option>
@@ -26,17 +33,14 @@
 			<option value="windows">Windows</option>
 			<option value="electrical">Electrical</option>
 			<option value="plumbing">Plumbing</option>
-			<option value="other">Other (please explain)</option>
+			<option value="other">Other</option>
 		</select>
 	</div>
+
 	<div class="form-field">
-		<label for="helper">Name(s) of Helper(s):</label>
-		<input type="text" name="helper">
-	</div>
-	<div class="form-field">
-		<label= for="decade">Decade:</label>
-		<select name="decade">
-			<option value="placeholder" disabled selected>Please select</option>
+		<label for="decade">Decade:</label>
+		<select name="decade" required>
+			<option value="placeholder" disabled selected>Select</option>
 			<option value="1970s">1970s</option>
 			<option value="1980s">1980s</option>
 			<option value="1990s">1990s</option>
@@ -44,10 +48,17 @@
 			<option value="2010s">2010s</option>
 		</select>
 	</div>
+
 	<div class="form-field">
-		<label for="message">Optional message, reminiscence or anecdote:</label>
-		<input type="text" name="message" maxlength="500">
+		<label for="helper">Name(s) of Helper(s):</label>
+		<textarea type="text" name="helper" placeholder="Seperate each name with a comma"></textarea>
 	</div>
+
+	<div class="form-field">
+		<label for="message">Reminiscence or anecdote:</label>
+		<textarea type="text" name="message" placeholder="Tell a story, share a memory, or just leave a little note - 500 character limit." maxlength="500"></textarea>
+	</div>
+
 	<div class="form-actions">
 		<button class="btn" type="submit" value="submit">Submit</button>
 	</div>

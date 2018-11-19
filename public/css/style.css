@@ -1,9 +1,25 @@
+p {
+  font-size: 1.2em;
+  line-height: 1.5em; }
+
+b {
+  font-size: 1.2em;
+  line-height: 1.5em; }
+
+h1 {
+  font-size: 2.2em !important; }
+
+h2 {
+  font-size: 1.6em !important;
+  line-height: 1.4em !important;
+  margin-bottom: 1.2em !important; }
+
 .btn {
   display: block;
   width: 30%;
   float: right;
   padding: 10px;
-  background: black;
+  background: #205F82;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-width: 1px 1px 3px;
   border-radius: 3px;
@@ -15,76 +31,123 @@
 .btn:hover,
 .btn:focus {
   outline: none;
-  background: #000000; }
+  background: #789EB4; }
 
 .btn:active {
   transform: translateY(1px); }
+
+a {
+  color: #205F82; }
+
+a:link {
+  color: #789EB4; }
+
+a:visited {
+  color: #789EB4; }
+
+a:hover {
+  color: #1F9CDF; }
+
+a:active {
+  color: #4690B8; }
+
+footer {
+  background-color: #f1f1f1;
+  margin-top: 3em; }
+  footer p {
+    font-size: 1em;
+    margin-bottom: 0; }
 
 html {
   height: 100%; }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: #FFFFFF;
-  font-family: -apple-system, 'Segoe UI', sans-serif;
-  text-align: left; }
+  font-family: Helvetica, Sans-Serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 0; }
 
-.body-container {
-  text-align: left;
-  width: 90vw; }
+.content-container {
+  min-height: 90vh !important; }
 
-@media only screen and (min-width: 768px) {
-  .body-container {
-    text-align: left;
-    width: 50vw; } }
-
-@media only screen and (min-width: 992px) {
-  .body-container {
-    text-align: left;
-    width: 40vw; } }
-
-.header-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90vw;
-  border-bottom: solid black 0.4px;
-  margin-bottom: 1em; }
-
-.logo {
-  align-self: center; }
-  .logo a:link, .logo a:visited, .logo a:hover, .logo a:active {
-    text-decoration: none;
-    color: #000000; }
+.content {
+  margin-bottom: 3em;
+  padding-bottom: 1em;
+  border-bottom: solid #D3D3D3 0.2px; }
 
 nav {
-  margin: 0 0.8em 0 0;
-  align-self: center; }
-
-header ul {
-  display: flex;
-  flex-flow: row wrap;
-  list-style-type: none; }
-
-header ul li {
-  padding: 0 0 0 1.4em;
-  font-size: 0.9em; }
-  header ul li a:link, header ul li a:visited, header ul li a:hover, header ul li a:active {
+  margin-bottom: 2em; }
+  nav a:link, nav a:visited, nav a:hover, nav a:active {
     text-decoration: none;
-    color: #000000; }
+    color: #205F82; }
+  nav img {
+    margin-bottom: 7px; }
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: #205f82;
+  /* Black fallback color */
+  background-color: rgba(32, 95, 130, 0.9);
+  /* Black w/opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  display: none; }
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%;
+  /* 25% from the top */
+  width: 100%;
+  /* 100% width */
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */ }
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #FFFFFF !important;
+  display: block;
+  /* Display block instead of inline */
+  transition: 0.3s;
+  /* Transition effects on hover (color) */ }
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #818181 !important; }
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  right: 45px;
+  font-size: 60px; }
+
+img {
+  width: 100%;
+  margin-bottom: 2em; }
 
 #map {
-  height: 400px; }
-
-.form-header {
-  width: 80vw;
-  margin-bottom: 1em; }
+  height: 600px;
+  z-index: 0; }
 
 form {
-  width: 80vw; }
+  margin-bottom: 4em; }
   form .form-field {
     margin-bottom: 2em; }
     form .form-field label {
@@ -92,14 +155,10 @@ form {
       margin-bottom: 0.5em;
       font-weight: 600;
       text-transform: uppercase; }
-    form .form-field select, form .form-field input {
+    form .form-field select, form .form-field input, form .form-field textarea {
+      font-family: inherit;
+      font-size: inherit;
       display: block;
       margin-bottom: 0.5em;
       padding: 1em;
-      width: 90%; }
-
-@media only screen and (min-width: 768px) {
-  .form-header {
-    width: 50vw; }
-  form {
-    width: 50vw; } }
+      width: 100%; }
