@@ -31,7 +31,7 @@ $ npm run dev
 You'd like to contribute? Why not file an [issue](https://github.com/langphil/bobs-chico-map/issues) for a feature that you think would improve the project? Feel free to add features and make [pull requests](https://github.com/langphil/bobs-chico-map/pulls) too!
 
 ## Credits
-This is a project that [Jared Kellner](https://twitter.com/jrobertkeller?lang=en) and [Phil Lang](https://langp.me) worked on together.
+This is a project that [Jared Keller](https://twitter.com/jrobertkeller?lang=en) and [Phil Lang](https://langp.me) worked on together.
 
 ## License
 This project is licensed under the MIT License
