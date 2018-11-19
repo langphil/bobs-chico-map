@@ -2,6 +2,9 @@ $(document).ready(function(){
 
 	let map = L.map('map').setView([39.728493, -121.837479], 13);
 
+  $('#loading').show()
+  $('#map').hide()
+
 	const geojson = $.ajax({
 		url:"/geojson",
 		dataType: "json",
@@ -13,6 +16,8 @@ $(document).ready(function(){
 
 	$.when(geojson).done(function(data){
 		drawMap(data)
+    $('#loading').hide()
+    $('#map').show()
 	})
 
 	function drawMap(data) {

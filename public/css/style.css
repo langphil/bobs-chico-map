@@ -12,7 +12,7 @@ h1 {
 h2 {
   font-size: 1.6em !important;
   line-height: 1.4em !important;
-  margin-bottom: 1.2em !important; }
+  margin-bottom: 1.6em !important; }
 
 .btn {
   display: block;
@@ -108,13 +108,13 @@ nav {
 /* Position the content inside the overlay */
 .overlay-content {
   position: relative;
-  top: 25%;
+  top: 10%;
   /* 25% from the top */
   width: 100%;
   /* 100% width */
   text-align: center;
   /* Centered text/links */
-  margin-top: 30px;
+  margin-top: 20px;
   /* 30px top margin to avoid conflict with the close button on smaller screens */ }
 
 /* The navigation links inside the overlay */
@@ -130,21 +130,26 @@ nav {
 
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
-  color: #818181 !important; }
+  color: #818181 !important;
+  text-decoration: none !important; }
 
 /* Position the close button (top right corner) */
 .overlay .closebtn {
   position: absolute;
-  right: 45px;
+  right: 20px;
   font-size: 60px; }
 
 img {
   width: 100%;
   margin-bottom: 2em; }
 
-#map {
+.map {
   height: 600px;
   z-index: 0; }
+
+.loading {
+  display: none;
+  text-align: center; }
 
 form {
   margin-bottom: 4em; }
