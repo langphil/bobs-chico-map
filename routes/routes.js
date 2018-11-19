@@ -23,4 +23,8 @@ router.post('/submission', (req, res) => {
 	locationController(req, res);
 })
 
+router.get('/about', (req, res) => {
+  res.render('about')
+})
+
 module.exports = router

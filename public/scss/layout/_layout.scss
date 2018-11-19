@@ -10,7 +10,11 @@ body {
 	margin-bottom: 0;
 }
 
-.content-header {
+.content-container {
+  min-height: 90vh !important;
+}
+
+.content {
 	margin-bottom: $margin * 3;
 	padding-bottom: $padding;
 	border-bottom: solid $light-grey 0.2px;
